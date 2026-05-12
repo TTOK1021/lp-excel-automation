@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel業務自動化ツール | CSVをダブルクリックだけでレポート化</title>
+    <meta name="description" content="CSVファイルをフォルダに入れてダブルクリックするだけで、集計・装飾済みのExcelレポートを自動生成。Python業務自動化ツールで作業時間を劇的に短縮。">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Excel業務自動化ツール</h1>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">CSVをダブルクリックするだけで<br>集計済みExcelレポートが完成</h2>
+                    <p class="hero-subtitle">毎月の手作業集計から解放。<br>Pythonの知識不要で、誰でも使える業務自動化ツール</p>
+                    <a href="#contact" class="btn btn-primary">無料相談してみる</a>
+                    <p class="hero-note">※現在の業務内容をお聞かせください</p>
+                </div>
+                <div class="hero-image">
+                    <div class="excel-card">
+                        <div class="excel-header">
+                            <div class="excel-dot"></div>
+                            <div class="excel-dot"></div>
+                            <div class="excel-dot"></div>
+                        </div>
+                        <div class="excel-toolbar">
+                            <div class="excel-tab active">月次レポート</div>
+                            <div class="excel-tab">集計表</div>
+                        </div>
+                        <div class="excel-body">
+                            <div class="excel-row header-row">
+                                <div class="excel-cell">担当者</div>
+                                <div class="excel-cell">売上</div>
+                                <div class="excel-cell">前月比</div>
+                            </div>
+                            <div class="excel-row">
+                                <div class="excel-cell">山田</div>
+                                <div class="excel-cell">¥1,234,000</div>
+                                <div class="excel-cell positive">↑ 12%</div>
+                            </div>
+                            <div class="excel-row">
+                                <div class="excel-cell">佐藤</div>
+                                <div class="excel-cell">¥987,000</div>
+                                <div class="excel-cell positive">↑ 8%</div>
+                            </div>
+                            <div class="excel-row">
+                                <div class="excel-cell">鈴木</div>
+                                <div class="excel-cell">¥756,000</div>
+                                <div class="excel-cell negative">↓ 3%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課題セクション -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">こんな悩みありませんか？</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3 class="problem-title">毎月同じ作業の繰り返し</h3>
+                    <p class="problem-text">CSVファイルを開いて、手作業でコピー＆ペースト。集計作業に毎回30分〜数時間かかる</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔄</div>
+                    <h3 class="problem-title">ピボットテーブルを毎回作成</h3>
+                    <p class="problem-text">月次レポートのたびに、同じピボットテーブルや集計表を作り直している</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3 class="problem-title">転記ミス・集計ミスが不安</h3>
+                    <p class="problem-text">手作業のため、数値の転記ミスや集計ミスが発生しやすく、確認作業にも時間がかかる</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">👤</div>
+                    <h3 class="problem-title">属人化している</h3>
+                    <p class="problem-text">担当者しか作業手順を知らず、休暇や退職時に業務が止まってしまう</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解決策セクション -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title">解決方法はシンプル</h2>
+            <p class="section-subtitle">たった3ステップで完了</p>
+            <div class="solution-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">CSVをフォルダに入れる</h3>
+                        <p class="step-text">inputフォルダに処理したいCSVファイルをドラッグ＆ドロップ</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">batファイルをダブルクリック</h3>
+                        <p class="step-text">デスクトップのbatファイルをダブルクリックするだけ</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Excelレポートが完成</h3>
+                        <p class="step-text">outputフォルダに装飾済みのExcelレポートが自動生成</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 機能セクション -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">充実の機能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3 class="feature-title">複数CSVの一括読み込み</h3>
+                    <p class="feature-text">何個でもCSVを同時に処理。フォルダに入れるだけで自動結合</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">多様な自動集計</h3>
+                    <p class="feature-text">月別・担当者別・カテゴリ別・店舗別など、業務に合わせた集計を自動実行</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">装飾済みExcel出力</h3>
+                    <p class="feature-text">罫線・色付け・フォント設定済み。そのまま報告書として使えるクオリティ</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">文字コード自動判定</h3>
+                    <p class="feature-text">UTF-8・Shift-JIS混在でもOK。文字化けの心配なし</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">エラーファイルはスキップ</h3>
+                    <p class="feature-text">読み込みエラーや空ファイルは自動スキップ。処理が途中で止まりません</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">サンプルデータ付き</h3>
+                    <p class="feature-text">納品時にサンプルデータを同梱。すぐに動作確認が可能</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After セクション -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">作業時間が劇的に短縮</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card before">
+                    <div class="comparison-label">Before</div>
+                    <h3 class="comparison-title">手作業での集計</h3>
+                    <div class="comparison-time">30分〜数時間</div>
+                    <ul class="comparison-list">
+                        <li>複数のCSVファイルを1つずつ開く</li>
+                        <li>データをコピー＆ペーストで結合</li>
+                        <li>ピボットテーブルを手動作成</li>
+                        <li>罫線や色付けなどの装飾作業</li>
+                        <li>転記ミスがないか確認</li>
+                    </ul>
+                </div>
+                <div class="comparison-arrow">
+                    <div class="arrow-text">自動化で</div>
+                    <div class="arrow-icon">→</div>
+                </div>
+                <div class="comparison-card after">
+                    <div class="comparison-label">After</div>
+                    <h3 class="comparison-title">自動化ツール使用</h3>
+                    <div class="comparison-time">数秒〜数分</div>
+                    <ul class="comparison-list">
+                        <li>CSVをフォルダに入れる</li>
+                        <li>batファイルをダブルクリック</li>
+                        <li>完成を待つだけ</li>
+                        <li class="highlight">✓ ミスゼロ</li>
+                        <li class="highlight">✓ 誰でも実行可能</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プランセクション -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">料金プラン</h2>
+            <p class="section-subtitle">業務内容に合わせて選べる3つのプラン</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-plan">ベーシック</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">¥30,000</span>
+                        <span class="price-unit">〜</span>
+                    </div>
+                    <p class="pricing-description">複数CSVの結合とExcel出力</p>
+                    <ul class="pricing-features">
+                        <li>CSV結合機能</li>
+                        <li>Excel形式での出力</li>
+                        <li>基本的な装飾</li>
+                        <li>導入サポート</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">相談する</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">おすすめ</div>
+                    <h3 class="pricing-plan">スタンダード</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">¥50,000</span>
+                        <span class="price-unit">〜</span>
+                    </div>
+                    <p class="pricing-description">集計機能付きレポート作成</p>
+                    <ul class="pricing-features">
+                        <li>ベーシックの全機能</li>
+                        <li>月別・担当者別集計</li>
+                        <li>複数シート出力</li>
+                        <li>グラフ・ピボット自動作成</li>
+                        <li>使い方マニュアル付き</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">相談する</a>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-plan">プレミアム</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">¥80,000</span>
+                        <span class="price-unit">〜</span>
+                    </div>
+                    <p class="pricing-description">完全カスタマイズ対応</p>
+                    <ul class="pricing-features">
+                        <li>スタンダードの全機能</li>
+                        <li>業務フローのヒアリング</li>
+                        <li>完全カスタマイズ開発</li>
+                        <li>複雑な集計ロジック対応</li>
+                        <li>使い方説明会（オンライン）</li>
+                        <li>納品後1ヶ月サポート</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">相談する</a>
+                </div>
+            </div>
+            <p class="pricing-note">※料金は業務の複雑さにより変動します。まずはお気軽にご相談ください。</p>
+        </div>
+    </section>
+
+    <!-- 制作者紹介セクション -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">制作者について</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">👨‍💻</div>
+                    <h3 class="about-subtitle">AIエンジニア</h3>
+                    <p class="about-text">
+                        画像認識・Python自動化・LLM活用を専門としています。<br>
+                        プログラミングの知識がない方でも安心して使える、シンプルで実用的なツールを提供します。
+                    </p>
+                </div>
+                <div class="about-process">
+                    <h3 class="about-process-title">対応の流れ</h3>
+                    <ul class="about-process-list">
+                        <li><strong>1. ヒアリング：</strong>現在の業務内容・課題・理想の状態をお聞きします</li>
+                        <li><strong>2. 提案：</strong>最適な自動化方法とプランをご提案</li>
+                        <li><strong>3. 開発：</strong>業務に合わせたツールを開発</li>
+                        <li><strong>4. 納品：</strong>サンプルデータとマニュアル付きで納品</li>
+                        <li><strong>5. サポート：</strong>使い方の説明から運用までサポート</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">まずは現在の手作業を教えてください</h2>
+            <p class="section-subtitle">業務内容をお聞かせいただければ、最適な自動化方法をご提案します</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">こんな方はお気軽にご相談ください</h3>
+                    <ul class="contact-list">
+                        <li>「自動化できるか分からない」という段階でもOK</li>
+                        <li>どんな作業をどのくらいの時間でやっているか教えてください</li>
+                        <li>CSVファイルのサンプルがあれば、より具体的な提案が可能です</li>
+                        <li>まずは無料で相談だけでも大歓迎です</li>
+                    </ul>
+                </div>
+                <div class="contact-cta">
+                    <a href="mailto:your-email@example.com?subject=Excel業務自動化ツールについて&body=【現在の業務内容】%0D%0A%0D%0A【課題・困っていること】%0D%0A%0D%0A【理想の状態】%0D%0A%0D%0A" class="btn btn-primary btn-large">メールで相談する</a>
+                    <p class="contact-note">※メールソフトが起動します。ご不明点もお気軽にお問い合わせください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 Excel業務自動化ツール. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
